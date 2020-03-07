@@ -138,7 +138,7 @@
                   <h4 class="subheading">Faça seu cadastro</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Para começar a utilizar os nossos maravilhosos serviços, você precisará realizar o seu cadastro na plataforma Handshake, clique no ícone ao lado e efetue o seu cadastro agora mesmo!</p>
+                  <p class="text-muted" align= "justify">Para começar a utilizar os nossos maravilhosos serviços, você precisará realizar o seu cadastro na plataforma Handshake, clique no ícone ao lado e efetue o seu cadastro agora mesmo!</p>
                 </div>
               </div>
             </li>
@@ -152,7 +152,7 @@
                   <h4 class="subheading">Faça o seu login</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Para efetuar seu login você deve ......</p>
+                  <p class="text-muted" align= "justify">Após realizar o seu cadastro, você poderá efetuar o seu login, dessa forma, você poderá ter acesso a funcionalidades exclusivas dentro do sistema.</p>
                 </div>
               </div>
             </li>
@@ -166,7 +166,7 @@
                   <h4 class="subheading">Explore nosso site</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Na nossa plataforma handshake você poderá encontrar músicos do seu estilo aplicando filtros nas suas pesquisas.</p>
+                  <p class="text-muted" align= "justify">Se você possui o perfil de "artista" poderá editá-lo para aumentar a sua visibilidade na plataforma ou buscar eventos disponíveis no momento, se você possui o perfil de "contratante", você poderá efetuar buscas e listar eventos que você está disponibilizando no momento.</p>
                 </div>
               </div>
             </li>
@@ -180,15 +180,13 @@
                   <h4 class="subheading">Você encontrará o que tanto deseja</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted" align= "justify">Aplicando os filtros nas suas buscas ou através de recomendações, você poderá encontrar o que deseja, seja eventos ou artistas, com isso, você poderá firmar um acordo entre as duas partes, para que ocorra o seu evento ou a sua apresentação. O Handshake busca sempre facilitar a sua vida, o Handshake é para todos!</p>
                 </div>
               </div>
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <h4>Encontre
-                  <br>o que deseja
-                  <br>no nosso site!!!</h4>
+                <h4>Comece <br> agora <br> mesmo!</h4>
               </div>
             </li>
           </ul>

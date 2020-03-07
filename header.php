@@ -21,7 +21,7 @@
             <a class="nav-link js-scroll-trigger" href="index.php #contact">Fale Conosco</a>
           </li>
           <button type="button" href="#" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#login-modal">Login</button>
-          &nbsp;
+          &nbsp;&nbsp;
           <button type="button" hrer="#" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#cadastro-modal">Cadastre-se</button>
         </ul>
       </div>
