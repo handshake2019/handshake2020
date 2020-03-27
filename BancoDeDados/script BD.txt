@@ -1,0 +1,151 @@
+create database bd_handshake;
+use bd_handshake;
+
+/* Conceitual: */
+
+CREATE TABLE Artistas (
+    idartistas INTEGER PRIMARY KEY,
+    disponibilidade VARCHAR(15) not null,
+    nomeartistas VARCHAR(32) not null,
+    datanascimentoartistas date not null,
+    tipodocumentoartistas BOOLEAN not null,
+    numdocumentoartistas VARCHAR(14) UNIQUE not null,
+    bairroartistas VARCHAR(32) not null,
+    cidadeartistas VARCHAR(32) not null,
+    ruaartistas VARCHAR(50) not null,
+    cepartistas VARCHAR(8) not null,
+    numeroartistas VARCHAR(5) not null,
+    whatsapp VARCHAR(13) not null,
+    youtube VARCHAR(100) not null,
+    email VARCHAR(60) not null,
+    telefone VARCHAR(12) not null,
+    instagram VARCHAR(50) not null,
+    senhaartistas VARCHAR(50) not null
+);
+
+CREATE TABLE Eventos (
+    ideventos INTEGER PRIMARY KEY,
+    periododoevento DATE not null,
+    generomusical VARCHAR(32) not null,
+    numeroeventos VARCHAR(5) not null,
+    cidadeeventos VARCHAR(32) not null,
+    ruaeventos VARCHAR(50) not null,
+    cepeventos VARCHAR(8) not null,
+    bairroeventos VARCHAR(32) not null 
+);
+
+CREATE TABLE Contratantes (
+    cepcontratantes VARCHAR(8) not null,
+    numerocontratantes VARCHAR(5) not null,
+    bairrocontratantes VARCHAR(32) not null,
+    cidadecontratantes VARCHAR(32) not null,
+    ruacontratantes VARCHAR(50) not null,
+    idcontratantes INTEGER PRIMARY KEY,
+    nomecontratantes VARCHAR(50) not null,
+    tipodeevento VARCHAR(32)not null,
+    horarirodoevento DATE not null,
+    numdocumentocontratantes VARCHAR(14) UNIQUE not null,
+    tipodocumentocontratantes BOOLEAN not null,
+    datanascimentocontratantes date not null,
+    senhacontratantes VARCHAR(50) not null
+);
+
+CREATE TABLE evecon (
+    fk_Contratantes_id INTEGER,
+    fk_Eventos_id INTEGER
+);
+
+CREATE TABLE arteve (
+    fk_Artistas_id INTEGER,
+    fk_Eventos_id INTEGER
+);
+ 
+ALTER TABLE evecon ADD CONSTRAINT FK_evecon_1
+    FOREIGN KEY (fk_Contratantes_id)
+    REFERENCES Contratantes (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE evecon ADD CONSTRAINT FK_evecon_2
+    FOREIGN KEY (fk_Eventos_id)
+    REFERENCES Eventos (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE arteve ADD CONSTRAINT FK_arteve_1
+    FOREIGN KEY (fk_Artistas_id)
+    REFERENCES Artistas (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE arteve ADD CONSTRAINT FK_arteve_2
+    FOREIGN KEY (fk_Eventos_id)
+    REFERENCES Eventos (id)
+    ON DELETE RESTRICT;
+
+
+insert into artistas
+values
+('1','manhã','jhonata','0','50040030009','sao jose','jaboatao','travessa 1','52100211','21','5581998404050','www.youtube.com1','artista@gmail.com','81998404050','www.instagram.com0'),
+('2','personalizado','lucas','0','11100022244','sao antonio','olinda','travessa 2','0011122','11','5581999999999','www.youtube.com2','artista1@gmail.com','081998999999','www.instagram.com1'),
+('3','noite','victor','0','11100022255','sao pedro','recife','travessa 3','0011133','31','5582999999999','www.youtube.com3','artista2@gmail.com','081999999999','www.instagram.com2'),
+('4','noite','thiago','0','11100022256','sao pedro','recife','travessa 11','0011133','31','5582999978999','www.youtube.com3','artista2@gmail.com','081999999999','www.instagram.com2'),
+('5','integral','matheus','1','11100022233111','sao paulo','camaragibe','travessa 4','0011144','41','5583999999999','www.youtube.com4','artista3@gmail.com','081999899999','www.instagram.com3'),
+('6','noite','	washington','1','11100022233222','sao tiago','sao lorenço','travessa 5','0011155','51','5584999999999','www.youtube.com5','artista4@gmail.com','081998999999','www.instagram.com4'),
+('7','integral','marques','1','11100022233444','sao judas','moreno','travessa 6','0011166','61','5585999999999','www.youtube.com6','artista5@gmail.com','081999999998','www.instagram.com5'),
+('8','personalizado','barros','0','11100022266','sao tadeu','cabo','travessa 7','0011177','71','5586999999999','www.youtube.com7','artista6@gmail.com','081999999989','www.instagram.com6'),
+('9','noite','araujo','1','11100022233666','sao filipe','vitoria','travessa 8','0011188','81','5587999999999','www.youtube.com8','artista7@gmail.com','081999999899','www.instagram.com7'),
+('10','manhã','fernando','0','11100022259','sao andre','paulista','travessa 9','0011199','91','5581989999999','www.youtube.com9','artista8@gmail.com','081999998999','www.instagram.com8'),
+('11','horario comercial','henrique','1','11100022233777','sao joao','gravata','travessa 10','0011100','28','5581998999999','www.youtube.com/1','artista9@gmail.com','081979999999','www.instagram.com9');
+
+insert into eventos
+values
+('1','10032020','jazz','455','jaboatao','rua 11','54101200','boa vista'),
+('2','11032020','frevo','465','olinda','rua 12','54102200','boa viagem'),
+('3','12032020','rock','457','camaragibe','rua 13','54103200','santo amaro'),
+('4','13032020','brega','485','vitoria','rua 14','54104200','sao pedro'),
+('5','14032020','funk','459','moreno','rua 15','54105200','sao paulo'),
+('6','15032020','pagode','355','recife','rua 16','54106200','sao tadeu'),
+('7','16032020','samba','255','paudalho','rua 17','54107200','sao cristovao'), 
+('8','17032020','pop','955','cabo','rua 18','54108200','sao lucas'),
+('9','18032020','eletronico','855','limoeiro','rua 19','54109200','sao fernando'),
+('10','19032020','rap','459','ipojuca','rua 20','54100201','sao mateus');
+
+insert into contratantes
+values
+('00000010','45','santo amaro','caruaru','rua 21','1','kabum','aniversario',"2020-03-11",'111001001000','1'),
+('00000009','46','santo antonio','paudalho','rua 22','2','nagem','festa',"2102-20-20",'121001001000','1'),
+('00000008','47','santo pedro','abreu','rua 23','3','infobox','shopping',"2202-20-20",'131001001000','1'),
+('00000007','48','santo paulo','olinda','rua 24','4','infohorse','formatura',"2302-20-20",'101001001000','1'),
+('00000006','49','santo judas','paulista','rua 25','5','chipart','diversao',"2402-20-20",'141001001000','1'),
+('00000005','20','santo abraao','jaboatao','rua 26','6','rockets','encontro',"2502-20-20",'151001001000','1'),
+('00000004','80','santo davi','recife','rua 27','7','pichal','aniversario',"2602-202-0",'161001001000','1'),
+('00000003','90','santo natanael','recife','rua 28','8','lojas americana','festa',"2702-20-20",'171001001000','1'),
+('00000002','30','santo felipe','cabo','rua 29','9','submarino','formatura',"2802-20-20",'181301201000','1'),
+('00000001','10','santo lebeu','limoeiro','rua 31','10','Dell','aniversario',"2902-20-20",'191001001000','1');
+
+insert into arteve
+values
+('1','1'),
+('2','2'),
+('3','3'),
+('4','4'),
+('5','5'),
+('6','6'),
+('7','7'),
+('8','8'),
+('9','9'),
+('10','10');
+
+insert into evecon
+values
+('1','1'),
+('2','2'),
+('3','3'),
+('4','4'),
+('5','5'),
+('6','6'),
+('7','7'),
+('8','8'),
+('9','9'),
+('10','10');
+
+
+SELECT nomeartistas, nomecontratantes FROM 'artistas','contratantes' WHERE horarioevento like '2020-03-11';

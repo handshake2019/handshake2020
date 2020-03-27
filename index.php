@@ -74,48 +74,6 @@
     </a>
   </div>
 
-  <!-- Serviços -->
-  <section class="page-section" id="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Serviços</h2>
-          <h3 class="section-subheading text-muted">Se você é músico, terá a possibilidade de encontrar eventos para se apresentar. Se você quer contratar um músico para o seu evento, terá a possibilidade de fazer isso de forma muito fácil !</h3>
-        </div>
-      </div>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <a href="artistas.php">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-music fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Artistas</h4>
-          <p class="text-muted">O lugar ideal para você que está em busca de oportunidades para alavancar na sua vida profissional.</p>
-        </div>
-        </a>
-        <div class="col-md-4">
-          <a href="contratantes.php">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-handshake fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Contratantes</h4>
-          <p class="text-muted">O local perfeito para encontrar pessoas capacitadas para tocarem em seus eventos, de forma rápida e fácil.</p>
-        </div>
-        </a>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-calendar-alt fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Eventos</h4>
-          <p class="text-muted">Encontre os eventos de seu interesse que estão acontecendo no momento, em tempo real.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Como funciona o handshake -->
   <section class="page-section" id="about">
     <div class="container">
@@ -130,7 +88,9 @@
           <ul class="timeline">
             <li>
               <div class="timeline-image">
+                <a href="#cadastro-modal" data-toggle="modal">
                 <img class="rounded-circle img-fluid" src="img/about/1.png" alt="">
+                </a>
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -144,7 +104,9 @@
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
+                <a href="#login-modal" data-toggle="modal">
                 <img class="rounded-circle img-fluid" src="img/about/2.png" alt="">
+                </a>
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -158,7 +120,9 @@
             </li>
             <li>
               <div class="timeline-image">
+                <a href="#explorar-modal" data-toggle="modal">
                 <img class="rounded-circle img-fluid" src="img/about/3.png" alt="">
+                </a>
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -185,11 +149,113 @@
               </div>
             </li>
             <li class="timeline-inverted">
+              <a href="#services">
               <div class="timeline-image">
                 <h4>Comece <br> agora <br> mesmo!</h4>
               </div>
+              </a>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Modal para explorar o site, 3 opções: Artistas, Contratantes e Eventos -->
+  <div class="modal fade" id="explorar-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Cabeçalho -->
+        <div class="modal-header">
+          <h4 class="modal-title">Selecione alguma das opções abaixo</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal Corpo -->
+        <div class="modal-body">
+          <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 text-center">
+          <a href="Artistas.php">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-music text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Artistas</h3>
+          </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-4 text-center">
+          <a href="Contratantes.php">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-handshake text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Contratantes</h3>
+          </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-4 text-center">
+          <a href="eventos.php">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-calendar-alt text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Eventos</h3>
+          </div>
+          </a>
+        </div>
+      </div>
+
+          
+        </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--Fim do modal explorar-->
+
+
+  <!-- Serviços -->
+  <section class="page-section" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Serviços</h2>
+          <h3 class="section-subheading text-muted">Se você é músico, terá a possibilidade de encontrar eventos para se apresentar. Se você quer contratar um músico para o seu evento, terá a possibilidade de fazer isso de forma muito fácil !</h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <a href="artistas.php">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-music fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Artistas</h4>
+          <p class="text-muted">O lugar ideal para você que está em busca de oportunidades para alavancar na sua vida profissional.</p>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="contratantes.php">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-handshake fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Contratantes</h4>
+          <p class="text-muted">O local perfeito para encontrar pessoas capacitadas para tocarem em seus eventos, de forma rápida e fácil.</p>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="eventos.php">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-calendar-alt fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Eventos</h4>
+          <p class="text-muted">Encontre os eventos de seu interesse que estão acontecendo no momento, em tempo real.</p>
+          </a>
         </div>
       </div>
     </div>

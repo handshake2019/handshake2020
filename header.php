@@ -9,11 +9,15 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="index.php #services">Serviços</a>
+            <a class="nav-link js-scroll-trigger" href="Artistas.php">Artistas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="index.php #about">Como Funciona</a>
+            <a class="nav-link js-scroll-trigger" href="Contratantes.php">Contratantes</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="eventos.php">Eventos</a>
+          </li>
+          
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="index.php #team">Sobre Nós</a>
           </li>
@@ -85,7 +89,7 @@
         <!-- Modal Corpo -->
         <div class="modal-body">
           <div class="container">
-            <form  action="procedimentos.php" method="POST" id="formCadastro">
+            <form action="procedimentoscadastro.php" method="POST" id="formCadastro">
               <div class="form-group">
                 <label for="usuario">Usuário:</label>
                   <input type="text" class="form-control" id="etdusuario" maxlength="30" name="etdusuario"  placeholder="Ex: Usuário(Até 20 caracteres)">

@@ -23,6 +23,9 @@
   <!-- Custom styles for this template -->
   <link href="contcss/cont.min.css" rel="stylesheet">
 
+  <!-- Barra de pesquisar dos contratantes -->
+  <link href="css/barrapesquisa.css" rel="stylesheet">
+
   <!--Favicon-->
   <link rel="shortcut icon" type="image/png" href="img/handshake.png"/>
 
@@ -44,6 +47,61 @@
       </div>
     </div>
   </header>
+
+  <!---Barra de pesquisar dos artistas no site--->
+<div>
+      <section class="search-sec">
+    <div class="container-fluid">
+        <form action="#" method="post" novalidate="novalidate">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                <option>Tipo de Evento</option>
+                                <option>Aniversário</option>
+                                <option>Show</option>
+                                <option>Apresentação</option>
+                                <option>Casamento/option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                <option>Localização</option>
+                                <option>Jaboatão</option>
+                                <option>Recife</option>
+                                <option>Moreno</option>
+                                <option>Olinda</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                <option>Horário do Evento</option>
+                                <option>Horário Comercial</option>
+                                <option>Integral</option>
+                                <option>Fim de Semana</option>
+                                <option>Personalizado</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <button type="button" class="btn btn-danger wrn-btn">Pesquisar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<!---Barra de pesquisar dos artistas no site--->
+
+
+
 
   <!-- Portfolio Grid -->
   <section class="bg-light page-section" id="portfolio">

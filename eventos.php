@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Artistas</title>
+  <title>Eventos</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,11 +20,14 @@
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-  <!-- Custom styles for this template -->
-  <link href="artcss/art.min.css" rel="stylesheet">
+  <!-- CSS da página de Eventos -->
+  <link href="eventcss/event.min.css" rel="stylesheet">
 
-  <!-- Barra de pesquisar dos artistas -->
+  <!-- Barra de pesquisar -->
   <link href="css/barrapesquisa.css" rel="stylesheet">
+
+  <!-- Calendário CSS -->
+  <link href="css/calendario.css" rel="stylesheet">
 
   <!--Favicon-->
   <link rel="shortcut icon" type="image/png" href="img/handshake.png"/>
@@ -32,24 +35,39 @@
   <!--Cor do scroll-->
   <link href="css/scroll.css" rel="stylesheet">
 
+  <!---- CSS do calendario---->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script
+       src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+<!-------->
+
+
 </head>
 
 <body class="scrollbar scrollbar-sunny-morning" id="page-top">
 
-<?php include './header.php'; ?>
+  <?php include './header.php'; ?>
 
   <!-- Header (mudar classe e) -->
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-heading text-uppercase">ARTISTAS</div>
-        <div class="intro-lead-in">Em busca de visibilidade no ramo musical ?</div>
+        <div class="intro-heading text-uppercase">Eventos</div>
+        <div class="intro-lead-in">frase</div>
       </div>
     </div>
   </header>
 
-
-<!---Barra de pesquisar dos artistas no site--->
+  <!---Barra de pesquisar dos artistas no site--->
 <div>
       <section class="search-sec">
     <div class="container-fluid">
@@ -57,7 +75,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                        <div class="col-lg-4 col-md-44 col-sm-12 p-0">
                             <select class="form-control search-slt" id="exampleFormControlSelect1">
                                 <option>Gênero Musical</option>
                                 <option>Jazz</option>
@@ -68,29 +86,18 @@
                                 <option>Example one</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                        <div class="col-lg-4 col-md-4 col-sm-12 p-0">
                             <select class="form-control search-slt" id="exampleFormControlSelect1">
                                 <option>Localização</option>
+                                <option>Jaboatão</option>
                                 <option>Recife</option>
-                                <option>Cabo</option>
-                                <option>Camaragibe</option>
-                                <option>Example one</option>
-                                <option>Example one</option>
-                                <option>Example one</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <select class="form-control search-slt" id="exampleFormControlSelect1">
-                                <option>Disponibilidade</option>
-                                <option>Horário Comercial</option>
-                                <option>Integral</option>
-                                <option>Fim de Semana</option>
-                                <option>Personalizado</option>
+                                <option>Moreno</option>
+                                <option>Olinda</option>
                                 <option>Example one</option>
                                 <option>Example one</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                        <div class="col-lg-4 col-md-4 col-sm-12 p-0">
                             <button type="button" class="btn btn-danger wrn-btn">Pesquisar</button>
                         </div>
                     </div>
@@ -101,21 +108,18 @@
 </section>
 <!---Barra de pesquisar dos artistas no site--->
 
-
-
-</div>
   <!-- Portfolio Grid -->
   <section class="bg-light page-section" id="portfolio">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Artistas</h2>
-          <h3 class="section-subheading text-muted">Faça buscas de eventos que estão disponíveis no momento, de acordo com o seu perfil e diponibilidade.</h3>
+          <h2 class="section-heading text-uppercase">Eventos</h2>
+          <h3 class="section-subheading text-muted">Faça buscas de músicos para se apresentarem nos seus eventos, de acordo com o seu gosto.</h3>
         </div>
-      </div>     
+      </div>
       <div class="row">
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" href="perfilartistas.php">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
@@ -129,7 +133,7 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" href="perfilartistas.php">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
@@ -143,7 +147,7 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" href="perfilartistas.php">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
@@ -157,7 +161,7 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" href="perfilartistas.php">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
@@ -171,7 +175,7 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" href="perfilartistas.php">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
@@ -185,7 +189,7 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" href="perfilartistas.php">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
@@ -205,10 +209,7 @@
   <!-- Portfolio Modals -->
 
   <!-- Modal 1 -->
-
-  <!-- Área do do modal comentando, pois não iremos utilzar no momento, está sendo utilizado um link direto para o perfil do artista
-
-  <div  tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -220,7 +221,8 @@
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
-                <h2 class="text-uppercase">Artista 1</h2>
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Contratante 1</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
@@ -229,11 +231,6 @@
                   <li>Client: Threads</li>
                   <li>Category: Illustration</li>
                 </ul>
-                <a href="perfilartistas.php">
-                <button class="btn btn-primary" type="button">
-                  <i class="far fa-user-circle"></i>
-                  Ver perfil completo
-                </button></a>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Close Project</button>
@@ -244,12 +241,8 @@
       </div>
     </div>
   </div>
-  Fim do modal comentado-->
 
   <!-- Modal 2 -->
-
-   <!-- Área do do modal comentando, pois não iremos utilzar no momento, está sendo utilizado um link direto para o perfil do artista
-
   <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -263,7 +256,6 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <!--
                 <h2 class="text-uppercase">Project Name</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
@@ -273,11 +265,6 @@
                   <li>Client: Explore</li>
                   <li>Category: Graphic Design</li>
                 </ul>
-                <a href="perfilartistas.php">
-                <button class="btn btn-primary" type="button">
-                  <i class="far fa-user-circle"></i>
-                  Ver perfil completo
-                </button></a>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Close Project</button>
@@ -289,11 +276,7 @@
     </div>
   </div>
 
-  Fim do modal comentado-->
-
   <!-- Modal 3 -->
-
-  <!-- Área do do modal comentando, pois não iremos utilzar no momento, está sendo utilizado um link direto para o perfil do artista
   <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -307,7 +290,6 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <!--
                 <h2 class="text-uppercase">Project Name</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
@@ -317,11 +299,6 @@
                   <li>Client: Finish</li>
                   <li>Category: Identity</li>
                 </ul>
-                <a href="perfilartistas.php">
-                <button class="btn btn-primary" type="button">
-                  <i class="far fa-user-circle"></i>
-                  Ver perfil completo
-                </button></a>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Close Project</button>
@@ -334,9 +311,6 @@
   </div>
 
   <!-- Modal 4 -->
-
-   <!-- Área do do modal comentando, pois não iremos utilzar no momento, está sendo utilizado um link direto para o perfil do artista
-
   <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -350,7 +324,6 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <!--
                 <h2 class="text-uppercase">Project Name</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
@@ -360,11 +333,6 @@
                   <li>Client: Lines</li>
                   <li>Category: Branding</li>
                 </ul>
-                <a href="perfilartistas.php">
-                <button class="btn btn-primary" type="button">
-                  <i class="far fa-user-circle"></i>
-                  Ver perfil completo
-                </button></a>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Close Project</button>
@@ -377,9 +345,6 @@
   </div>
 
   <!-- Modal 5 -->
-
-   <!-- Área do do modal comentando, pois não iremos utilzar no momento, está sendo utilizado um link direto para o perfil do artista
-
   <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -393,7 +358,6 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <!--
                 <h2 class="text-uppercase">Project Name</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
@@ -403,11 +367,6 @@
                   <li>Client: Southwest</li>
                   <li>Category: Website Design</li>
                 </ul>
-                <a href="perfilartistas.php">
-                <button class="btn btn-primary" type="button">
-                  <i class="far fa-user-circle"></i>
-                  Ver perfil completo
-                </button></a>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Close Project</button>
@@ -420,9 +379,6 @@
   </div>
 
   <!-- Modal 6 -->
-
-   <!-- Área do do modal comentando, pois não iremos utilzar no momento, está sendo utilizado um link direto para o perfil do artista
-
   <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -436,7 +392,6 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <!--
                 <h2 class="text-uppercase">Project Name</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
@@ -446,11 +401,6 @@
                   <li>Client: Window</li>
                   <li>Category: Photography</li>
                 </ul>
-                <a href="perfilartistas.php">
-                <button class="btn btn-primary" type="button">
-                  <i class="far fa-user-circle"></i>
-                  Ver perfil completo
-                </button></a>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Close Project</button>
@@ -460,8 +410,9 @@
         </div>
       </div>
     </div>
-  </div>-->
+  </div>
 
+  <?php include './calendario.php'; ?>
   <?php include './footer.php'; ?>
 
   <!-- Bootstrap core JavaScript -->
